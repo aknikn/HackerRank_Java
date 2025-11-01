@@ -1,8 +1,6 @@
-# FizzBuzz
+# 000: [FizzBuzz](https://www.hackerrank.com/challenges/fizzbuzz/problem "https://www.hackerrank.com/challenges/fizzbuzz/problem")
 - level: Easy
 - language: Java
-
-> FizzBuzz in Hackerrank (https://www.hackerrank.com/challenges/fizzbuzz/problem)
 
 
 ## Description of the problem
