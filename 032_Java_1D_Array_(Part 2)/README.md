@@ -1,0 +1,69 @@
+# 032: [Java 1D Array (Part 2)](https://www.hackerrank.com/challenges/java-1d-array/problem "https://www.hackerrank.com/challenges/java-1d-array/problem")
+- level: Medium
+- language: Java
+
+
+## Description of the problem
+Let's play a game on an array!<br>
+You're standing at index 0 of an n-element array named game.<br>
+From some index  (where 0 ≦ i ≦ n), you can perform one of the following moves:<br>
+- Move Backward: If cell i-1 exists and contains a zero, you can walk back to cell i-1.<br>
+- Move Forward:<br>
+	- If cell i+1 contains a zero, you can walk to cell i+1.
+	- If cell i+leap contains a zero, you can jump to cell i+leap.
+	- If you're standing in cell n-1 or the value of n≦i+leap, you can walk or jump off the end of the array and win the game.
+
+In other words, you can move from index n-1 to index i+1, i-1, or i+leap as long as the destination index is a cell containing a 0.<br>
+If the destination index is greater than n-1, you win the game.
+
+### Function Description
+Complete the canWin function in the editor below.<br>
+canWin has the following parameters:<br>
+- int leap: the size of the leap
+- int game[n]: the array to traverse
+
+### Returns
+- boolean: true if the game can be won, otherwise false
+
+### Imput Format
+The first line contains an integer, q, denoting the number of queries (i.e., function calls).<br>
+The 2×q subsequent lines describe each query over two lines:
+
+1. The first line contains two space-separated integers describing the respective values of n and leap.
+2. The second line contains n space-separated binary integers (i.e., zeroes and ones) describing the respective values of game0, game1, … , gamen-1.
+
+### Constraints
+- 1 ≦ q ≦ 5000
+- 2 ≦ n ≦ 100
+- 0 ≦ leap ≦ 100
+- It is guaranteed that the value of game[0] is always 0.
+
+### Sample Input
+> STDIN           Function<br>
+> -----           --------<br>
+> 4               q = 4 (number of queries)<br>
+> 5 3             game[] size n = 5, leap = 3 (first query)<br>
+> 0 0 0 0 0       game = [0, 0, 0, 0, 0]<br>
+> 6 5             game[] size n = 6, leap = 5 (second query)<br>
+> 0 0 0 1 1 1     . . .<br>
+> 6 3<br>
+> 0 0 1 1 1 0<br>
+> 3 1<br>
+> 0 1 0
+
+### Sample Output
+> YES<br>
+> YES<br>
+> NO<br>
+> NO
+
+### Explanation
+We perform the following 4 queries:
+1. For game=[0, 0, 0, 0, 0] and leap=3, we can walk and/or jump to the end of the array because every cell contains a 0.<br>
+	Because we can win, we return true.
+2. For game=[0, 0, 0, 1, 1, 1] and leap=5, we can walk to index 1 and then jump i+leap = 1+5 = 6 units to the end of the array.<br>
+	Because we can win, we return true.
+3. For game=[0, 0, 1, 1, 1, 0] and leap=3, there is no way for us to get past the three consecutive ones.<br>
+	Because we cannot win, we return false.
+4. For game=[0, 1, 0] and leap=1, there is no way for us to get past the one at index.<br>
+	Because we cannot win, we return false.
