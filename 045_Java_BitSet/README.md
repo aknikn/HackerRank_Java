@@ -1,4 +1,4 @@
-# 045: [Java BitSet](● "●")https://www.hackerrank.com/challenges/java-bitset/problem
+# 045: [Java BitSet](https://www.hackerrank.com/challenges/java-bitset/problem "https://www.hackerrank.com/challenges/java-bitset/problem")
 - level: Easy
 - language: Java
 

@@ -6,7 +6,7 @@ public class Solution045 {
         /* Enter your code here.
            Read input from STDIN.
            Print output to STDOUT.
-           Your class should be named Solution. */
+           Your class should be named Solution.*/
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.next());
         int M = Integer.parseInt(sc.next());  
